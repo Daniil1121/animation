@@ -86,11 +86,11 @@
     transform: translateY(0px);
   }
   33% {
-    transform: translateY(-20px) translateX(30px);
+    transform: translateY(-20px) translateX(20px);
 
   }
   66% {
-    transform: translateY(-20px) translateX(-30px);
+    transform: translateY(-20px) translateX(-20px);
     }
 }
 
