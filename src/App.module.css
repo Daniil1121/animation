@@ -1,0 +1,69 @@
+.app {
+  background-color: #33485F;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 20vw;
+  height: 70vh;
+}
+.ice_cream {
+  width: 20vw;
+  height: 50vh;
+  background-color: beige;
+  border-radius: 100px 100px 35px 35px;
+  overflow: hidden;
+}
+
+.ice_cream::before {
+  content: '';
+  width: 2.5vw;
+  height: 34vh;
+  background: rgb(255, 255, 255);
+  display: block;
+  position: absolute;
+  z-index: 2;
+  top: 20vh;
+  left: 41.5vw;
+  border-radius: 50px;
+  opacity: 0.6;
+}
+
+.color {
+  width: 200%;
+  height: 150%;
+  background-image: linear-gradient(0deg,
+   #f63a99 25%,
+   #30dcf6 25%,
+   #30dcf6 25%, 
+   #30dcf6 50%, 
+   #f2d200 50%, 
+   #f2d200 50%, 
+   #f2d200 75%, 
+   #70ca5c 75%);
+  transform: translateX(-180px) translateY(-20px) rotate(-15deg);
+
+  animation: flavours 100s linear infinite;
+}
+@keyframes flavours {
+  to {
+    background-position: 0 1000vh;
+  }
+}
+
+.stick {
+  width: 5vw;
+  margin: auto;
+  height: 20vh;
+  background: #E09C5F;
+  border-radius: 0 0 35px 35px;
+}
+.stick::after {
+  background: #795637;
+  height: 5vh;
+  width: 5vw;
+  display: block;
+  content: "";
+}
