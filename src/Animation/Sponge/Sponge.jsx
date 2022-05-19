@@ -4,7 +4,6 @@ function MoveBear() {
   return (
     <div className={s.app}>
       <div className={s.container}>
-
         <div className={s.aquarium}>
           <div className={s.sponge}>
             <div className={s.face}>
@@ -18,12 +17,10 @@ function MoveBear() {
           <div className={s.bowl}>
             <div className={s.water}></div>
             <div className={s.glare}></div>
-
           </div>
           <div className={s.stand}></div>
           <div className={s.floor}></div>
         </div>
-
       </div>
     </div>
   )
