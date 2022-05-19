@@ -18,6 +18,11 @@ function App() {
     localStorage.setItem('page', page)
   }, [page])
 
+const style = () => {
+  if (page === 3 ) return {background: 'rgb(65, 105, 225)', borderRadius: '3px'}
+  else return {}
+}
+
   return (
     <div className='App'>
 
@@ -26,7 +31,7 @@ function App() {
       {page === 3 && <Sponge />}
 
       <div className='pagination_container'>
-        <ul className="pagination">
+        <ul style={style()} className="pagination">
           <li onClick={() => setPage(1)} className={`waves-effect ${page === 1 && 'active'}`}><a >1</a></li>
           <li onClick={() => setPage(2)} className={`waves-effect ${page === 2 && 'active'}`}><a >2</a></li>
           <li onClick={() => setPage(3)} className={`waves-effect ${page === 3 && 'active'}`}><a href="#!">3</a></li>
