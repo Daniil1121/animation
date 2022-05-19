@@ -1,0 +1,250 @@
+.app {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aquarium {
+  width: 800px;
+  height: 800px;
+}
+
+.bowl {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 140px/240px;
+  box-shadow: inset rgba(0, 0, 0, 0.1) -40px 0px 0px 0px;
+  overflow: hidden;
+}
+
+.stand {
+  width: 260px;
+  height: 30px;
+  margin: auto;
+  border: 4px solid black;
+  border-radius: 140px/240px;
+  overflow: hidden;
+  position: relative;
+  top: -4px;
+  background-color: rgb(65, 105, 225);
+}
+
+.floor {
+  width: 800px;
+  border: 4px solid black;
+  border-radius: 4px;
+  position: relative;
+  top: -8px;
+}
+
+.water {
+  background-color: rgba(65, 105, 225, 0.5);
+  width: 100%;
+  height: 300px;
+  position: relative;
+  top: 95px;
+  transform: scale(1.2);
+  animation: water 3s linear infinite;
+
+}
+
+@keyframes water {
+    25% {
+      transform: scale(1.25);
+    }
+    35% {
+      transform: scale(1);
+    }  
+    60% {
+      transform: scale(1);
+    }
+    65% {
+  transform: scale(1.25);
+  }
+  75% {
+  transform: scale(1.25);
+  }
+  90% {
+  transform: scale(1.2);
+  }
+  
+}
+
+.sponge {
+  position: relative;
+  transform: translate(320px, 230px) rotate(0deg);
+  width: 150px;
+  height: 200px;
+  background-color: #FAEF37;
+  border-radius: 15px;
+  box-shadow: inset rgb(0, 0, 0) 0px 0px 0px 4px,
+   inset rgb(221 165 33 / 47%) -20px 0px 0px 0px;
+  overflow: hidden;
+  box-sizing: border-box;
+  animation: sponge 3s linear infinite;
+}
+
+@keyframes sponge {
+  15% {
+  transform: translate(320px, 280px);
+  }
+  17% {
+  transform: translate(325px, 280px);
+  }
+  19% {
+  transform: translate(315px, 280px);
+  }
+  21% {
+    transform: translate(325px, 280px);
+  }
+  23% {
+    transform: translate(315px, 280px) ;
+  }
+  25% {
+    transform: translate(320px, 280px);
+  }
+  35% {
+    transform: translate(320px, 110px) rotate(70deg);
+  }
+  45% {
+  transform: translate(320px, -60px) rotate(180deg);
+  }  
+  55% {
+    transform: translate(320px, 0px) rotate(310deg);
+  }
+  64.99% {
+  transform: translate(320px, 250px) rotate(360deg);
+  }
+  65% {
+  transform: translate(320px, 250px) rotate(0deg);
+  }
+  70% {
+  transform: translate(320px, 265px);
+  }
+  75% {
+  transform: translate(320px, 260px);
+  }
+ 90% {
+  transform: translate(320px, 230px);
+ }
+}
+
+
+.sponge::after {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+  transform: translate(30px, 85px);
+  box-sizing: border-box;
+}
+
+.sponge::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: white;
+  border: 4px solid black;
+  border-radius: 50%;
+  transform: translate(135px, 65px);
+  box-sizing: border-box;
+}
+
+.hole:nth-last-of-type(1) {
+  position: relative;
+  top: -60px;
+  left: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(221 165 33 / 47%);
+}
+
+.hole:nth-last-of-type(2) {
+  position: relative;
+  top: -15px;
+  left: 105px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgb(221 165 33 / 47%);
+}
+
+
+.hole:nth-last-of-type(3) {
+  position: relative;
+  top: 155px;
+  left: 60px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgb(221 165 33 / 47%);
+}
+
+.eyes {
+  width: 100px;
+  height: 20px;
+  position: absolute;
+  transform: translate(25px, 90px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.eyes::after, .eyes::before  {
+  display: block;
+  content: '';
+  width: 20px;
+  height: 20px;
+  background: black;
+  border-radius: 50%;
+}
+
+.mouth {
+  width: 30px;
+  height: 20px;
+  background-color: red;
+  position: absolute;
+  top: 130px;
+  left: 60px;
+  border-radius: 4px 4px 14px 14px;
+  border: 3px solid black;
+}
+
+.glare {
+  width: 40px;
+  height: 100px;
+  background-color: rgb(255 255 255 / 50%);
+  position: relative;
+  top: -238px;
+  left: 30px;
+  border-radius: 30px;
+}
+
+@keyframes splash {
+  25% {
+    
+  }
+  45% {
+
+  }  
+  65% {
+
+  }
+}

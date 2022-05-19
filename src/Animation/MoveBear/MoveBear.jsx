@@ -1,7 +1,7 @@
 import style from './MoveBear.module.css'
 
 
-function App() {
+function MoveBear() {
   return (
     <div className={style.app}>
       <div className={style.container}>
@@ -26,4 +26,4 @@ function App() {
   );
 }
 
-export default App;
+export default MoveBear;
