@@ -10,7 +10,7 @@ function App() {
 
 
   useEffect(() => {
-    setPage(Number(localStorage.getItem('page')))
+    setPage(Number(localStorage.getItem('page') || 1))
   }, [])
 
   useEffect(() => {
