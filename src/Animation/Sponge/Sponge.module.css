@@ -4,6 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .container {
@@ -683,4 +684,13 @@
     opacity: 0;
   }
 
+}
+
+@media (max-width:767px) {
+  .aquarium {
+    transform: translateY(120px);
+  }
+.bowl {
+  width: 350px;
+}
 }
