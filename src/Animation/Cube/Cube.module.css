@@ -19,7 +19,7 @@
   background-color: rgb(36, 112, 173);
   width: 150px;
   height: 150px;
-  animation: blue_block 5s ease-in-out infinite;
+  animation: blue_block 3s ease-in-out infinite;
   transform: translateX(-150px);
 }
 
@@ -30,7 +30,7 @@
   position: relative;
   z-index: 2;
   left: 0;
-  animation: blur_block 5s ease-in-out infinite;
+  animation: blur_block 3s ease-in-out infinite;
 }
 
 @keyframes blue_block {
