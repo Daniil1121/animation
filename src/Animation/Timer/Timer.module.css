@@ -26,9 +26,53 @@
   position: relative;
 }
 
-.timer_counter {
+.timer::before {
   content: '';
   display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #7b8f67;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 1;
+  animation: timer_before 10s steps(1, end) infinite;
+  visibility: hidden;
+}
+
+.timer::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 100%;
+  background-color: #ffffff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  animation: timer_after 10s steps(1, end) infinite;
+  visibility: visible;
+}
+
+@keyframes timer_before {
+  0%{
+    visibility: hidden;
+  }
+  50%,100% {
+    visibility: visible;
+  }
+}
+
+@keyframes timer_after {
+  0%{
+    visibility: visible;
+  }
+  50%,100% {
+    visibility: hidden;
+  }
+}
+
+.timer_counter {
   width: 300px;
   height: 300px;
   border-radius: 50%;
@@ -37,6 +81,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 2;
 }
 
 .timer_count {
@@ -44,17 +89,17 @@
   color: rgb(255, 255, 255);
   font-size: 150px;
   left: 50%;
-  transform: translate(-50%, 120px);
+  transform: translate(-50%, 30px);
   z-index: 2;
-  animation: timer_count 10s steps(9, end) forwards;
+  animation: timer_count 10s steps(9, end) infinite;
 }
 
 @keyframes timer_count {
   0% {
-  transform: translate(-50%, 120px);
+  transform: translate(-50%, 30px);
   }
 100% {
-  transform: translate(-50%, -2590px);
+  transform: translate(-50%, -2670px);
 }
 }
 
@@ -80,12 +125,17 @@
   background-color: #7b8f67;
   width: 50%;
   height: 100%;
+  left: 50%;
   position: absolute;
 }
 
 
 @keyframes timer_line {
-  to {
-    transform: rotate(360deg);
+  0% {
+    transform: rotate(-180deg);
+  
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }
