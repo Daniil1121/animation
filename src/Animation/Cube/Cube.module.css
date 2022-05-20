@@ -1,0 +1,142 @@
+.app {
+  background: rgb(231, 226, 226);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 80%;
+  height: 150px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.blue_block {
+  background-color: rgb(36, 112, 173);
+  width: 150px;
+  height: 150px;
+  animation: blue_block 5s ease-in-out infinite;
+  transform: translateX(-150px);
+}
+
+.blur_block {
+  background-color: rgb(231, 226, 226);
+  width: 150px;
+  height: 150px;
+  position: relative;
+  z-index: 2;
+  left: 0;
+  animation: blur_block 5s ease-in-out infinite;
+}
+
+@keyframes blue_block {
+  0% {
+    box-shadow: none;
+    transform: translateX(-150px);
+  }
+
+  25% {
+    box-shadow: rgb(36, 112, 173) -20px 0px 40px 20px;
+  }
+
+  50% {
+    box-shadow: none;
+    transform: translateX(300px);
+  }
+
+  75% {
+    box-shadow: rgb(36, 112, 173) 20px 0px 40px 20px;
+
+  }
+
+  100% {
+    transform: translateX(-150px);
+
+  }
+}
+
+
+@keyframes blur_block {
+  0% {
+    transform: translateX(-150px);
+  }
+
+  50% {
+    transform: translateX(300px);
+  }
+
+  50.01% {
+    transform: translateX(0px);
+  }
+
+  100% {
+    transform: translateX(-450px)
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    height: 50px;
+  }
+
+  .blue_block {
+    width: 50px;
+    height: 50px;
+  }
+
+  .blur_block {
+    width: 50px;
+    height: 50px;
+  }
+
+  @keyframes blue_block {
+    0% {
+      box-shadow: none;
+      transform: translateX(-50px);
+    }
+
+    25% {
+      box-shadow: rgb(36, 112, 173) -20px 0px 40px 20px;
+    }
+
+    50% {
+      box-shadow: none;
+      transform: translateX(150px);
+    }
+
+    75% {
+      box-shadow: rgb(36, 112, 173) 20px 0px 40px 20px;
+    }
+
+    100% {
+      transform: translateX(-50px);
+
+    }
+  }
+
+
+  @keyframes blur_block {
+    0% {
+      transform: translateX(-50px);
+    }
+
+    50% {
+      transform: translateX(150px);
+    }
+
+    50.01% {
+      transform: translateX(50px);
+    }
+
+    100% {
+      transform: translateX(-150px)
+    }
+
+  }
+}
