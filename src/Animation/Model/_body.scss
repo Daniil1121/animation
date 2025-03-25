@@ -1,0 +1,117 @@
+.torso {
+    position: relative;
+    width: 80px;
+    height: 150px;
+    margin: auto;
+
+    .left,
+    .right,
+    .front,
+    .back,
+    .top,
+    .bottom {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(#047777 10%,
+                #059a9a 70%,
+                #059a9a 90%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+    }
+
+    .left {
+        transform: rotateY(90deg) translateZ(40px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10px;
+            background-color: #41399f;
+        }
+    }
+
+    .right {
+        transform: rotateY(90deg) translateZ(-40px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10px;
+            background-color: #41399f;
+        }
+    }
+
+    .top {
+        background: #755849;
+        height: 80px;
+        transform: rotateX(90deg) rotateZ(90deg) translateZ(35px);
+    }
+
+    .bottom {
+        height: 80px;
+        background: #41399f;
+        transform: rotateX(90deg) rotateZ(90deg) translateZ(-110px);
+    }
+
+    .front {
+        position: relative;
+        overflow: hidden;
+        width: 80px;
+        transform: translateZ(40px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            height: 20px;
+            background-color: #41399f;
+            transform: translateX(-31px) translateY(15px) rotateZ(25deg);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 30px;
+            height: 20px;
+            background-color: #41399f;
+            transform: translateX(31px) translateY(15px) rotateZ(-25deg);
+        }
+
+
+        .decolletage {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px) rotate(45deg);
+            width: 30px;
+            height: 30px;
+            background-color: #755849;
+        }
+    }
+
+    .back {
+        width: 80px;
+        transform: translateZ(-40px);
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 10px;
+            background-color: #41399f;
+        }
+    }
+
+}

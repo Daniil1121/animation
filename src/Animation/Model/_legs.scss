@@ -1,0 +1,153 @@
+.move {
+    .leg {
+        animation: legs 1s linear infinite;
+    }
+}
+
+.legs {
+    position: relative;
+    width: 79px;
+    height: 150px;
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .leg {
+        transform-origin: 0 -10px;
+        // transform: rotateX(45deg);
+
+        width: 100%;
+        height: 100%;
+
+        &.r-leg {
+            // background-color: red;
+            animation-delay: -0.5s;
+        }
+
+
+        .left,
+        .right,
+        .front,
+        .back,
+        .top,
+        .bottom {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .left {
+            transform: rotateY(90deg) translateZ(20px);
+            overflow: hidden;
+            background-color: #41399f;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 30%;
+                background-color: #676767;
+                bottom: 0;
+            }
+        }
+
+        .right {
+
+            transform: rotateY(90deg) translateZ(-20px);
+            overflow: hidden;
+            background-color: #41399f;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 30%;
+                background-color: #676767;
+                bottom: 0;
+            }
+
+        }
+
+        .top {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #41399f;
+            top: 0;
+            transform: rotateX(90deg) translateZ(20px);
+        }
+
+        .bottom {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: #676767;
+            bottom: 0;
+            transform: rotateX(90deg) translateZ(-20px);
+        }
+
+        .front {
+            transform: translateZ(20px);
+            overflow: hidden;
+            background-color: #41399f;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 30%;
+                background-color: #676767;
+                bottom: 0;
+            }
+
+        }
+
+        .back {
+
+            transform: translateZ(-20px);
+            overflow: hidden;
+            background-color: #41399f;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 30%;
+                background-color: #676767;
+                bottom: 0;
+            }
+
+
+        }
+
+    }
+
+}
+
+
+@keyframes legs {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    25% {
+        transform: rotateX(45deg);
+    }
+
+    50% {
+        transform: rotateX(0deg);
+    }
+
+    75% {
+        transform: rotateX(-45deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
